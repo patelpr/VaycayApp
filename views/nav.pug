@@ -1,0 +1,38 @@
+extends layout      
+block body
+    nav
+        .row.navi
+            header.col-6(role='header')
+                h1 VAYCAY
+
+            .col-6
+                ul.nav-menu
+                    if !user
+                        li
+                            a(href='/login') Login
+                        li
+                            a(href='/register') Register
+                    else
+                        li
+                            a(href='/add') Add
+                        li
+                            a(href='/faves') Faves
+                        li
+                            a(href='/places') Places
+                        li
+                            a(href="/logout") LogOut
+    block messages
+        if flashes.info
+            .alert.row
+                .info
+                    p=flashes.info
+        if flashes.warn
+            .alert.row
+                .error
+                    p=flashes.error
+        if flashes.success
+            .alert.row
+                .success
+                    p=flashes.success
+        
+    block content

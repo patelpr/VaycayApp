@@ -1,0 +1,20 @@
+extends nav
+
+block content
+
+    .row
+        .col-12
+            .card
+                h2= title
+                .add-form.row
+                    form(action="/add", method="post",enctype="multipart/form-data")
+                        label.row(for="location") Location Name
+                        input.row(type="text" id="location" name="locationName" required)
+                        p Select all that apply to the Venue
+                        each activity in ['Romantic', 'Festival', 'Adventure', 'Cruises', 'WildLife', 'Camping', 'Spa', 'Culture', 'Foodie']
+                            input.checkbox.hidden(name='activities', id=activity, type='checkbox',value=activity)
+                            label.checkbox-label.col-3(for=activity) #{activity}
+                        input(type="file", name="photo",accept="image/*" required)
+                        p Description
+                        textarea(name="description", cols="30", rows="5" required)
+                        input.btn(type="submit", value="Submit >")

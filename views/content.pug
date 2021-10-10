@@ -1,0 +1,12 @@
+extends nav
+
+block content
+    section.container(role='region' class='row')
+        each object in place
+            .col-6
+                a(href=`/places/${object.id}`)
+                    .card
+                        img.col-12.cont-img(src=`${object.photo || './img/bgd.jpg'}`, alt=`picture of ${object.locationName}`)
+                        h2= object.locationName.toUpperCase()
+                        
+                            

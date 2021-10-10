@@ -1,0 +1,37 @@
+extends nav
+
+block content
+
+    
+    .row
+        span
+            
+            form(action=`/fave/${place.id}`, method="post")                           
+                button.heart(type="submit")
+                    i.fa.fa-heart-o.fa-2x(aria-hidden='true')
+            -if (JSON.stringify(user._id) == JSON.stringify(place.creator))
+                a(href=`/edit/${place.id}`) 
+                    i.edit.fa.fa-pencil.fa-2x(aria-hidden='true') 
+                form(action=`/delete/${place.id}`, method="post")                           
+                    button.heart(type="submit")
+                        i.fa.fa-trash-o.fa-2x(aria-hidden="true")
+        .col-12
+            .card
+                
+                h2.title= place.locationName 
+                img.title(src=`${place.photo || '../img/bgd.jpg'}`, alt=`picture of ${place.locationName}`)
+                h3 Description
+                p.desc.title= place.description
+                h3 Activities
+                .row
+                    each activity in place.activities
+                        p.tag.col-3= activity
+                p.title.desc
+                h3.desc Reviews                    
+                form(action=`/reviews/${place.id}`, method="post")
+                    textarea(name="reviewText", cols="30", rows="5", placeholder='Type in your comment here')
+                    input.submitbtn(type="Submit", value="Submit",style="max-width:200px")
+                if place.messages
+                    each review in place.messages
+                        .card
+                            p= review

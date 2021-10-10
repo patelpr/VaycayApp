@@ -1,0 +1,28 @@
+extends layout
+
+block body
+    .row
+        .col-12
+            .darkbg
+                h2 VAYCAY
+            .card
+                h2 Welcome to VayCay!
+                p.desc Your hub for all prime vacation and venue collection.
+                h2 Instructions
+                p.desc It's simple, register for an account and login and you will be able to add your 
+                | favorite places in the world so that anyone may review or enjoy.
+                h2 Let's get started
+                .row 
+                    form(action="/login", method="get")
+                        p If you already have an account:
+                        button.hmpg(type="submit" value="Login") Login
+                    form(action="/register", method="get")
+                        p or you may create one for FREE!:
+                        button.hmpg(type="submit" value="Register") Register
+                    form(action="/login", method="post")
+                        p For a quick Demo of the App:
+                        input( type="text" name="email" value="parth.patel.r@gmail.com" hidden)
+                        input( type="password" name="password" value="asdf" hidden)
+                        button.hmpg(type="submit" value="Login") Demo Login
+                
+                

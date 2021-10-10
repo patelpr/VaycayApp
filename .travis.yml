@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services:
+  - mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: Nl7gv7UaIWXseeCgGr0cW9ImjCQnWZFbeV/hDRCx3r3Wr9uphXH5CimLv+qN9SWuWVC3h7a4IftUXbBINjSsRprboP8um6svUWy5bk1641gmL2jWynVkAq+JDhyjVwIx8aFC4xBfD7qlQ4swCqFB5or8yN74zXPDO7VIxOVs/oxyOkacYQ1MPvx13i5zLMdZXeckWtvti9RKjC2GQoyJ2xTrLn8YwGNZt6YJZRu9gB29o2VESil+cfF7Dn1+W4IBK+BrraPAnVKmDNZjJInkqQSjmXrC4CX8sduUTbUlRMmyqctI/9rRjC+6MK+86LuyhvoUNXmqbZRrObGQ1b4/Lcb4Cuq+vMBz1HOdjbxl3jgRLXnj3lCiwNwVqdS27GxB0p3xl8WgtPq/zGfHTo7w+NjNvMObURve9mhdW3Q2tJJqDcw06SALmsMX9lxPVhYvvdRIjRuhqV3ncfm4ju6N0rbFCD5RKVbku+lxZxnXrXZe+Cdsf99H7DJuzfX2Y3R6pq9WANiXkcX9H6aEoctdoOY92GttmHNMVRf0STDYGHjaIE9JLtSs05mNgGoJK1PzgwDPZVLILsPcqJBd8u+WfWT/cgoC04uAfQm0ciELc/6NKuLz8XFy/eL6QloKN7bUKJsth5O6lf9jz0ZlJMeJsuSzngE0ZRb9lNBQ50+bfME=
+  app: fathomless-beach-31066
+  on:
+    repo: patelpr/VayCay
