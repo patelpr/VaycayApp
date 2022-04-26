@@ -26,6 +26,6 @@ touch .env
 ***  
 Please Add the following keys to the .env file along with their values  
 DATABASE_URL=MONGODB URI STRING  
-OPTIONS= CLOUDINARY IMAGE HOSTING OBJECT {cloud_name,api_key}  
+OPTIONS= CLOUDINARY IMAGE HOSTING OBJECT {cloud_name,api_key,api_secret}  
 ***  
 npm i && npm start  
