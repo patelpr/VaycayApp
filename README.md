@@ -6,7 +6,7 @@ This app was built for explorers who visit tinytowns and dont have a particular 
 Many locals have great hole in the wall spots that you dont find on any tourist maps. If only there were a place to record all of the great places that you can't find on google, tripadvisor, and other travel apps.
 
 ## DEMO
-[App](https://vaycayapp.herokuapp.com/places)  
+[Click here for the App](https://vaycayapp.herokuapp.com/places)  
 Username: demo@gmail.com  
 Password: 12345678  
 
